@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatisation des Ventes</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 100px auto; text-align: center; }
+        h1 { color: #1F4E79; }
+        input[type="file"] { margin: 20px; }
+        button { background-color: #2E75B6; color: white; padding: 10px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #1F4E79; }
+    </style>
+</head>
+<body>
+    <h1>Automatisation des Ventes</h1>
+    <p>Uploadez votre fichier <b>ventes.csv</b> pour analyser vos données</p>
+    <form method="POST" action="/resultats/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="fichier_csv" accept=".csv" required><br><br>
+        <button type="submit">Analyser</button>
+    </form>
+</body>
+</html>
