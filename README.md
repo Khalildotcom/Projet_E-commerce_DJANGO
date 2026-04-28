@@ -23,16 +23,32 @@ L'utilisateur uploade un fichier `ventes.csv`, et l'application :
 
 ## 3. Installation
 ```bash
+# Cloner le projet
 git clone https://github.com/Khalildotcom/Projet_E-commerce_DJANGO.git
 cd Projet_E-commerce_DJANGO/automatisation
+
+# Créer l'environnement virtuel
+python -m venv venv
+
+# Activer l'environnement virtuel
+# Windows :
+venv\Scripts\activate
+# Mac/Linux :
+source venv/bin/activate
+
+# Installer les dépendances
 pip install -r requirements.txt
-python manage.py migrate
+
 ```
 
 ---
 
 ## 4. Utilisation
 ```bash
+# Appliquer les migrations (crée la base de données interne de Django)
+python manage.py migrate
+
+# Lancer le serveur
 python manage.py runserver
 ```
 Ouvrir dans le navigateur : http://127.0.0.1:8000/
@@ -44,6 +60,7 @@ ID,Prix,Quantite,Remise
 1,150.50,3,10
 
 2,200.00,2,5
+
 ---
 
 ## 5. Auteurs
